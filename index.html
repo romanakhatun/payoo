@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Payoo</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@5"
+      rel="stylesheet"
+      type="text/css"
+    />
+
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
+  <body
+    class="bg-[#f4f5f7] h-[100vh] flex items-center flex-col justify-center"
+  >
+    <div
+      class="h-[130px] w-[300px] bg-[url('./assets/bg.png')] bg-no-repeat bg-cover flex justify-center items-center"
+    >
+      <img class="" src="./assets/logo.png" alt="logo" />
+    </div>
+    <form class="w-xs bg-white p-8 space-y-4">
+      <div>
+        <label for="">Mobile Number</label>
+        <input
+          type="text"
+          placeholder="Enter your number"
+          class="input focus:outline-none bg-[#f4f5f7] rounded-full"
+        />
+      </div>
+      <div>
+        <label for="">4 Digit PIN</label>
+        <input
+          type="password"
+          placeholder="Enter 4 Digit PIN"
+          class="input focus:outline-none bg-[#f4f5f7] rounded-full"
+        />
+      </div>
+      <button
+        id="loginBtn"
+        class="btn w-full bg-[#0874F2] text-white rounded-full"
+      >
+        Login
+      </button>
+    </form>
+    <script src="./script.js"></script>
+  </body>
+</html>
