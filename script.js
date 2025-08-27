@@ -1,6 +1,6 @@
 document.getElementById("loginBtn").addEventListener("click", function (e) {
   e.preventDefault();
-  const defaultNum = 123456789;
+  const defaultNum = 12345678910;
   const defaultPin = 1234;
 
   const number = parseInt(document.getElementById("number").value);
