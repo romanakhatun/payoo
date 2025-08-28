@@ -9,6 +9,6 @@ document.getElementById("loginBtn").addEventListener("click", function (e) {
   if (defaultNum === number && defaultPin === pin) {
     window.location.href = "./home.html";
   } else {
-    alert("Enter Correct all information");
+    alert("Invalid credentials!");
   }
 });

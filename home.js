@@ -1,21 +1,52 @@
 // toggle
-const moneyMenu = document.getElementById("money-menu");
-const moneyForm = document.getElementById("money-form");
+function handleToggle(id) {
+  const forms = document.getElementsByClassName("form");
 
-const cashOutMenu = document.getElementById("cashOut-menu");
-const cashOutForm = document.getElementById("cashOut-form");
+  for (const form of forms) {
+    form.style.display = "none";
+  }
+  document.getElementById(id).style.display = "block";
+}
 
-console.log(moneyMenu, moneyForm, cashOutMenu, cashOutForm);
+function handleToggleButton(id) {
+  const menuBtns = document.getElementsByClassName("menu-btn");
 
-moneyMenu.addEventListener("click", function () {
-  moneyForm.style.display = "block";
-  cashOutForm.style.display = "none";
+  for (const menuBtn of menuBtns) {
+    menuBtn.classList.remove(
+      "border-[#0874F2]",
+      "text-[#0874F2]",
+      "bg-[#0874f20d]"
+    );
+    menuBtn.classList.add("text-[#080808b3]", "border-[#0808081a]");
+  }
+  document
+    .getElementById(id)
+    .classList.remove("text-[#080808b3]", "border-[#0808081a]");
+  document
+    .getElementById(id)
+    .classList.add("border-[#0874F2]", "text-[#0874F2]", "bg-[#0874f20d]");
+}
+////
+document.getElementById("money-menu").addEventListener("click", function () {
+  handleToggle("money-form");
+  handleToggleButton("money-menu");
 });
 
-cashOutMenu.addEventListener("click", function () {
-  moneyForm.style.display = "none";
-  cashOutForm.style.display = "block";
+document.getElementById("cashOut-menu").addEventListener("click", function () {
+  handleToggle("cashOut-form");
+
+  handleToggleButton("cashOut-menu");
 });
+
+const defaultPin = 1234;
+// reuseable function
+function getValueToNumber(id) {
+  return parseInt(document.getElementById(id).value);
+}
+
+function getInnerText(id) {
+  return parseInt(document.getElementById(id).innerText);
+}
 
 // add money
 document
@@ -23,14 +54,12 @@ document
   .addEventListener("click", function (e) {
     e.preventDefault();
 
-    const defaultPin = 1234;
-
     const bankAccount = document.getElementById("bank-account").value;
     const accountNumber = document.getElementById("number").value;
-    const pin = parseInt(document.getElementById("add-pin").value);
+    const pin = getValueToNumber("add-pin");
 
     // add amount
-    const addAmount = parseInt(document.getElementById("add-amount").value);
+    const addAmount = getValueToNumber("add-amount");
     const balance = document.getElementById("balance");
 
     if (accountNumber.length < 11) {
@@ -52,12 +81,9 @@ document.getElementById("withdraw-btn").addEventListener("click", function (e) {
   e.preventDefault();
 
   const withdrawNum = document.getElementById("withdraw-number").value;
-  const defaultPin = 1234;
-  const withdrawPin = parseInt(document.getElementById("withdraw-pin").value);
+  const withdrawPin = getValueToNumber("withdraw-pin");
 
-  const withdrawAmount = parseInt(
-    document.getElementById("withdraw-amount").value
-  );
+  const withdrawAmount = getValueToNumber("withdraw-amount");
 
   const balance = document.getElementById("balance");
 

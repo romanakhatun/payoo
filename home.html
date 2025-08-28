@@ -47,19 +47,22 @@
       <div class="grid grid-cols-3 gap-4 px-6 pb-4">
         <div
           id="money-menu"
-          class="text-center border border-[#0808081a] py-5 rounded-xl cursor-pointer"
+          class="menu-btn text-center border border-[#0808081a] py-5 rounded-xl cursor-pointer text-[#080808b3]"
         >
           <img class="mx-auto" src="./assets/add-money.png" alt="" />
-          <h2 class="text-[#080808b3]">Add Money</h2>
+          <h2>Add Money</h2>
         </div>
         <div
           id="cashOut-menu"
-          class="text-center border border-[#0808081a] py-5 rounded-xl cursor-pointer"
+          class="menu-btn text-center border border-[#0808081a] py-5 rounded-xl cursor-pointer"
         >
           <img class="mx-auto" src="./assets/cashout.png" alt="" />
           <h2 class="text-[#080808b3]">Cashout</h2>
         </div>
-        <div class="text-center border border-[#0808081a] py-5 rounded-xl">
+        <div
+          id="transfer-menu"
+          class="menu-btn text-center border border-[#0808081a] py-5 rounded-xl"
+        >
           <img class="mx-auto" src="./assets/transfer-money.png" alt="" />
           <h2 class="text-[#080808b3]">Transfer Money</h2>
         </div>
@@ -79,7 +82,7 @@
     </div>
     <div class="max-w-lg mx-auto mt-8">
       <!-- add money -->
-      <div id="money-form">
+      <div id="money-form" class="form">
         <h1 class="text-[#080808e6] font-bold text-xl mb-4">Add Money</h1>
 
         <form class="bg-white p-6 space-y-4">
@@ -130,7 +133,7 @@
         </form>
       </div>
       <!-- cash out money -->
-      <div id="cashOut-form" class="hidden">
+      <div id="cashOut-form" class="hidden form">
         <h1 class="text-[#080808e6] font-bold text-xl mb-4">Cash Out</h1>
 
         <form class="bg-white p-6 space-y-4">
@@ -168,6 +171,9 @@
             Withdraw Money
           </button>
         </form>
+      </div>
+      <div id="transfer-form" class="form">
+        <h1>Transfer button</h1>
       </div>
     </div>
     <script src="./home.js"></script>
