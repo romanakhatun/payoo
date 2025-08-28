@@ -54,27 +54,34 @@
         </div>
         <div
           id="cashOut-menu"
-          class="menu-btn text-center border border-[#0808081a] py-5 rounded-xl cursor-pointer"
+          class="menu-btn text-center border border-[#0808081a] py-5 rounded-xl cursor-pointer text-[#080808b3]"
         >
           <img class="mx-auto" src="./assets/cashout.png" alt="" />
           <h2 class="text-[#080808b3]">Cashout</h2>
         </div>
         <div
           id="transfer-menu"
-          class="menu-btn text-center border border-[#0808081a] py-5 rounded-xl"
+          class="menu-btn text-center border border-[#0808081a] py-5 rounded-xl cursor-pointer text-[#080808b3]"
         >
           <img class="mx-auto" src="./assets/transfer-money.png" alt="" />
           <h2 class="text-[#080808b3]">Transfer Money</h2>
         </div>
-        <div class="text-center border border-[#0808081a] py-5 rounded-xl">
+        <div
+          class="menu-btn text-center border border-[#0808081a] py-5 rounded-xl cursor-pointer text-[#080808b3]"
+        >
           <img class="mx-auto" src="./assets/bonus.png" alt="" />
           <h2 class="text-[#080808b3]">Get Bonus</h2>
         </div>
-        <div class="text-center border border-[#0808081a] py-5 rounded-xl">
+        <div
+          class="menu-btn text-center border border-[#0808081a] py-5 rounded-xl cursor-pointer text-[#080808b3]"
+        >
           <img class="mx-auto" src="./assets/bill.png" alt="" />
           <h2 class="text-[#080808b3]">Pay Bill</h2>
         </div>
-        <div class="text-center border border-[#0808081a] py-5 rounded-xl">
+        <div
+          id="transaction-menu"
+          class="menu-btn text-center border border-[#0808081a] py-5 rounded-xl cursor-pointer text-[#080808b3]"
+        >
           <img class="mx-auto" src="./assets/transaction.png" alt="" />
           <h2 class="text-[#080808b3]">Transactions</h2>
         </div>
@@ -172,8 +179,16 @@
           </button>
         </form>
       </div>
-      <div id="transfer-form" class="form">
-        <h1>Transfer button</h1>
+      <!--show transaction money  history-->
+      <div id="transaction-form" class="hidden form">
+        <div class="flex justify-between items-center">
+          <h1 class="text-[#080808e6] font-bold text-xl mb-4">
+            Transaction History
+          </h1>
+          <p class="text-[#08080880] cursor-pointer">View all</p>
+        </div>
+
+        <div id="transaction-container" class="space-y-4 mb-7"></div>
       </div>
     </div>
     <script src="./home.js"></script>
